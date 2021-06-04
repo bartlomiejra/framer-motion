@@ -3,22 +3,27 @@ import {motion, AnimatePresence} from 'framer-motion'
 import { Card, CardGrid, Container, Header } from "./Elements";
 import "./App.css";
 import Modal from './Modal'
+import Accordion from './Accordion'
+import Nav from "./Nav"
 import Menu from "./Menu";
 import blue from "./blue.png";
 import purp from "./purp.png";
 import black from "./black.png";
 import green from "./green.png";
 
-//B defoult all transforms are 3d
-// you should only animate transfroms and op
 
 function App() {
 	const [value, setValue] = useState(0)
 	const [isToggled, setToggle] = useState(false)
   return (
-    <motion.div	initial={{opacity: 0}}
+
+    <motion.div	
+	initial = {{opacity: 0}}
 animate={{opacity: 1}}
 transition={{duration: 1}} 
+
+
+
 
 	>
       
@@ -26,6 +31,7 @@ transition={{duration: 1}}
 	  
 	<Header>
         <Menu />
+		<Nav />
         <h1>Header</h1>
       </Header>
       <Container>
@@ -56,6 +62,9 @@ transition={{duration: 1}}
 				 <img src={purp} />
 			   </Card>
 		 </Modal>
+		 <Accordion 
+		 
+		 />
         <CardGrid >
           <Card 
 		  
